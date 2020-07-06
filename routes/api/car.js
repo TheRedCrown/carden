@@ -66,7 +66,7 @@ router.post('/', [auth, upload.array('images')], async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const cars = await Car.find();
+    const cars = await Car.find().sort('-date');
     res.json(cars);
   } catch (error) {}
 });
@@ -74,7 +74,7 @@ router.get('/', async (req, res) => {
 router.put('/:id', [auth], async (req, res) => {
   try {
     const car = await Car.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    console.log(req.body);
+    res.json(req.body);
   } catch (error) {}
 });
 router.delete('/:id', [auth], async (req, res) => {

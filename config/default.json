@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb://vovan:ux3fBFFBZh@ds115749.mlab.com:15749/heroku_1v0s4v41",
+  "mongoURI": "mongodb+srv://admin:admin@cluster0-wzu3j.mongodb.net/carden?retryWrites=true&w=majority",
   "jwtSecret": "mysecrettoken"
 }

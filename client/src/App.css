@@ -58,16 +58,7 @@ nav {
 .card:hover .more-details {
   background-color: #dddddd;
 }
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 170px;
-}
-.image-container img {
-  height: 150px;
-  width: 90%;
-}
+
 .card-details {
   width: 90%;
   margin: 0 auto;
@@ -337,14 +328,7 @@ aside ul li i {
     justify-content: center;
     overflow: hidden;
   }
-  .card {
-    width: 100%;
-    height: 310px;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
-    transition: all 0.3s;
-    margin-bottom: 20px;
-  }
+
   .navigation li {
     padding: 10px 10px;
   }
@@ -406,6 +390,7 @@ aside ul li i {
   main {
     background-color: #f1f1f1;
     width: 100%;
+    min-height: 100vh;
     overflow: hidden;
   }
   .admin-panel {
@@ -486,6 +471,24 @@ aside ul li i {
   }
   .login form button {
     width: 80%;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+  .image-container img {
+    height: 160px;
+    width: 90%;
+  }
+  .card {
+    width: 100%;
+    height: 350px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -725,6 +728,9 @@ aside ul li i {
     border: 1px solid #dfdfdf;
     font-weight: 500;
   }
+  .admin-info {
+    width: 100%;
+  }
   .admin-ul .title,
   .admin-info .title {
     width: 60%;
@@ -773,5 +779,23 @@ aside ul li i {
   }
   .login form button {
     width: 40%;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 170px;
+  }
+  .image-container img {
+    height: 150px;
+    width: 90%;
+  }
+  .card {
+    width: 100%;
+    height: 310px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s;
+    margin-bottom: 20px;
   }
 }

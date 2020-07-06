@@ -2,6 +2,7 @@ import React, { useState, Component } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 class AddCar extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class AddCar extends Component {
       location: '',
       imgCollection: '',
       desc: '',
+      redirect: null,
     };
     this.onTextChange = this.onTextChange.bind(this);
     this.onImageChange = this.onImageChange.bind(this);
@@ -63,7 +65,9 @@ class AddCar extends Component {
 
     info.append('desc', this.state.desc);
     // console.log(info);
-    Axios.post('/api/car', info);
+    Axios.post('/api/car', info).then((res) => {
+      this.setState({ redirect: true });
+    });
   }
   render() {
     const {
@@ -83,6 +87,7 @@ class AddCar extends Component {
     } = this.state;
     return (
       <div className="admin-panel">
+        {this.state.redirect ? <Redirect to="/admin" /> : ''}
         <h1>Добавить автомобиль</h1>
         <form className="add-car" onSubmit={(e) => this.onSubmit(e)}>
           <div className="form-group">
