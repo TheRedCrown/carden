@@ -1,0 +1,777 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.fa-phone-square {
+  color: black;
+  margin-left: 10px;
+}
+section {
+  min-height: 80vh;
+}
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.navigation {
+  display: flex;
+}
+.navigation li {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.navigation li:hover {
+  background-color: #123a5c;
+}
+.navigation li a {
+  color: white;
+  text-decoration: none;
+}
+nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #267ec8;
+  margin-bottom: 20px;
+  box-shadow: 0px 3px 8px #eee;
+  border-radius: 1px;
+}
+.cards-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card a {
+  text-decoration: none;
+}
+.card:hover .more-details {
+  background-color: #dddddd;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 170px;
+}
+.image-container img {
+  height: 150px;
+  width: 90%;
+}
+.card-details {
+  width: 90%;
+  margin: 0 auto;
+}
+.vehicle-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #444;
+}
+.price-style {
+  color: red;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 5px 0;
+}
+.meta-style {
+  font-size: 14px;
+  color: #333;
+}
+.more-details {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  height: 45px;
+  margin-top: 15px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  background-color: #123a5c;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dddddd;
+  font-size: 13px;
+}
+
+.img-slider .images img {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+.prevBtn,
+.nextBtn {
+  background: none;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 70px;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  cursor: pointer;
+}
+.prevBtn:hover,
+.nextBtn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+.prevBtn:hover {
+  background: linear-gradient(90deg, rgba(11, 11, 11, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.nextBtn:hover {
+  background: linear-gradient(270deg, rgba(11, 11, 11, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.prevBtn {
+  left: 0;
+}
+.nextBtn {
+  right: 0;
+}
+
+.vehicle-details h2 {
+  color: #444444;
+  margin-top: 5px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.vehicle-details ul li:first-child {
+  padding-top: 0px;
+}
+.vehicle-details ul li:last-child {
+  border: none;
+}
+.vehicle-details ul li {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.vehicle-details ul li span {
+  font-weight: 700;
+}
+.description {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 1px 8px #eee;
+  margin-bottom: 20px;
+}
+.description h2 {
+  color: #444444;
+  margin-top: 0px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+aside h1 {
+  width: 100%;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+aside h1 i {
+  margin-right: 10px;
+}
+aside ul {
+  width: 100%;
+}
+aside ul li {
+  background-color: #32363c;
+  padding: 20px 0;
+  padding-left: 30px;
+  cursor: pointer;
+}
+aside ul li:hover {
+  color: #b6b7b6;
+  background-color: #202226;
+}
+aside ul li:first-child {
+  border-bottom: 2px solid #22282c;
+}
+aside ul li i {
+  margin-right: 10px;
+}
+
+.admin-info {
+  display: flex;
+  padding: 20px 0;
+  padding-left: 30px;
+
+  border: 1px solid #dfdfdf;
+}
+.admin-info:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+.admin-info:nth-child(even) {
+  background-color: #f8f8f8;
+}
+.admin-info:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 20px;
+}
+.admin-info .title a {
+  color: #3d739b;
+  text-decoration: none;
+}
+.admin-info .title a:hover {
+  color: #315b7c;
+  text-decoration: underline;
+}
+
+.add-car button {
+  padding: 10px 15px;
+  width: 150px;
+  margin: 20px 0;
+  background-color: #0085bb;
+  border: 1px solid #0e75a8;
+  border-radius: 3px;
+  color: #daf0f4;
+}
+.add-car .file {
+  border: none;
+  margin: 0;
+}
+.admin-links a {
+  text-decoration: none;
+  color: #dddddd;
+}
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 8px #eee;
+  border-radius: 3px;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+.login form label {
+  margin-top: 10px;
+}
+.login form input {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.login form button {
+  margin-top: 10px;
+  align-self: center;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #5cb85c;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border: 1px solid #4cad4c;
+}
+.login h1 {
+  margin-bottom: 10px;
+  align-self: center;
+}
+@media screen and (min-width: 0px) {
+  .container {
+    width: 100%;
+  }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation {
+    align-items: center;
+    flex-direction: column;
+  }
+  nav {
+    height: auto;
+  }
+  .phone-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: 500;
+    color: #99abbd;
+    margin-top: 0;
+    font-size: 18px;
+  }
+  .logo {
+    font-size: 28px;
+    margin: 0 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .card {
+    width: 100%;
+    height: 310px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+  }
+  .navigation li {
+    padding: 10px 10px;
+  }
+  .img-slider {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .vehicle-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .vehicle-title h1 {
+    font-size: 16px;
+    color: #444444;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .vehicle-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 25px;
+    margin-bottom: 20px;
+  }
+  .prevBtn,
+  .nextBtn {
+    background: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 40px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    cursor: pointer;
+  }
+  .vehicle-details {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    flex-direction: column;
+  }
+  .admin-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  aside {
+    color: #eff0ef;
+    background-color: #22282c;
+    width: 100%;
+    min-height: 40vh;
+    overflow: hidden;
+  }
+  main {
+    background-color: #f1f1f1;
+    width: 100%;
+    overflow: hidden;
+  }
+  .admin-panel {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .admin-panel h1 {
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 26px;
+  }
+  .admin-ul {
+    overflow: hidden;
+    display: flex;
+    background: linear-gradient(0deg, rgba(234, 234, 234, 1) 0%, rgba(250, 250, 250, 1) 100%);
+    padding: 20px 0;
+    padding-left: 30px;
+    border: 1px solid #dfdfdf;
+    font-weight: 500;
+  }
+  .admin-info {
+    overflow: hidden;
+  }
+  .admin-ul .title,
+  .admin-info .title {
+    width: 55%;
+  }
+  .admin-ul .price,
+  .admin-ul .date,
+  .admin-info .price,
+  .admin-info .date {
+    display: none;
+  }
+  .admin-ul .delete,
+  .admin-info .delete {
+    width: 10%;
+  }
+  .admin-info .delete button {
+    background-color: #e90000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .add-car .form-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .add-car input {
+    width: 90%;
+    margin: 5px 0 10px 0;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .add-car .first-group {
+    margin: 0 auto;
+  }
+  .add-car .third-group {
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .add-car textarea {
+    width: 90%;
+    height: 300px;
+    margin: 0 0 10px 0;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .login {
+    width: 100%;
+  }
+  .login form button {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .card {
+    width: 48%;
+    transition: all 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+  }
+
+  .card:hover {
+    border: 1px solid #bbb;
+    box-shadow: 0px 1px 10px #bbb;
+  }
+  .vehicle-title h1 {
+    font-size: 24px;
+  }
+  .img-slider {
+    height: 250px;
+  }
+  .add-car .form-group {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .add-car input {
+    width: 90%;
+  }
+  .add-car .first-group {
+    margin: 0 0;
+  }
+  .add-car .third-group {
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+  }
+  .add-car .first-group {
+    margin-right: 20px;
+  }
+  .admin-panel {
+    width: 90%;
+  }
+  .login {
+    width: 80%;
+  }
+  .login form button {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 640px) {
+  .heading {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    height: 90px;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  nav {
+    justify-content: flex-start;
+  }
+  .navigation li {
+    padding: 10px 30px;
+  }
+  .phone-number {
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .img-slider {
+    height: 300px;
+  }
+  .admin-ul .title,
+  .admin-info .title {
+    width: 40%;
+  }
+  .admin-ul .price,
+  .admin-ul .date,
+  .admin-info .price,
+  .admin-info .date {
+    width: 20%;
+    display: block;
+  }
+  .admin-ul .delete,
+  .admin-info .delete {
+    width: 20%;
+  }
+  .login {
+    width: 50%;
+  }
+  .login form button {
+    width: 50%;
+  }
+  nav {
+    height: 50px;
+  }
+  .navigation {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: calc(95% / 3);
+    margin: 0 5px;
+  }
+  .logo {
+    font-size: 46px;
+  }
+  .phone-number {
+    font-size: 24px;
+  }
+  .img-slider {
+    height: 400px;
+  }
+  .admin-panel h1 {
+    margin-left: 0px;
+  }
+  .login {
+    width: 40%;
+  }
+  .login form button {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .admin-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  aside {
+    color: #eff0ef;
+    background-color: #22282c;
+    width: 18%;
+    min-height: 100vh;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .heading {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .navigation li:first-child {
+    border-right: 1px solid #2269a5;
+  }
+  .phone-number {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    font-weight: 500;
+    color: #99abbd;
+  }
+  .logo {
+    margin: 0 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  nav {
+    display: block;
+  }
+  .card {
+    margin: 0 10px;
+    width: 23%;
+    height: 310px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    box-shadow: 0px 1px 5px #eee;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+  }
+
+  .navigation li {
+    padding: 17px 30px;
+  }
+  .img-slider {
+    width: 75%;
+    height: 560px;
+  }
+  .vehicle-wrapper {
+    justify-content: space-between;
+  }
+  .vehicle-title h1 {
+    font-size: 36px;
+  }
+  .vehicle-title {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .prevBtn,
+  .nextBtn {
+    width: 70px;
+    font-size: 36px;
+  }
+  .vehicle-details {
+    width: 20%;
+    height: 540px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0px 1px 8px #eee;
+  }
+  .vehicle-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  main {
+    background-color: #f1f1f1;
+    width: 85%;
+  }
+  .admin-panel {
+    width: 90%;
+  }
+  .admin-panel h1 {
+    font-weight: 500;
+    font-size: xx-large;
+    margin-top: 10px;
+  }
+  .admin-ul {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(234, 234, 234, 1) 0%, rgba(250, 250, 250, 1) 100%);
+    padding: 20px 0;
+    padding-left: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #dfdfdf;
+    font-weight: 500;
+  }
+  .admin-ul .title,
+  .admin-info .title {
+    width: 60%;
+  }
+  .admin-ul .price,
+  .admin-ul .date,
+  .admin-info .price,
+  .admin-info .date {
+    width: 15%;
+  }
+  .admin-ul .delete,
+  .admin-info .delete {
+    width: 10%;
+  }
+  .admin-info .delete button {
+    background-color: #e90000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .add-car .form-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .add-car input {
+    width: 250px;
+    margin: 5px 0 10px 0;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .add-car .first-group {
+    margin-right: 20px;
+  }
+  .add-car .third-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .add-car textarea {
+    width: 555px;
+  }
+  .login {
+    width: 30%;
+  }
+  .login form button {
+    width: 40%;
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://vovan:WDYxWA1ZUMKfKTQu@cluster0-wzu3j.mongodb.net/carden?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
+}

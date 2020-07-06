@@ -1,0 +1,99 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "model": "2011 Jeep Grand Cherokee",
+      "price": "$10,000",
+      "pass": "100,000км",
+      "year": 2008,
+      "kpp": "Механическая",
+      "engine": "1.6",
+      "fuel": "Бензин",
+      "color": "Серый",
+      "state": "Новое",
+      "status": "В пути",
+      "location": "Украина",
+      "desc": "Много текста",
+      "images": [
+        "https://kolesa-uploads.ru/-/eec76be7-2cc8-47df-b6dc-47cbc15d494f/volvo-xc60-d4-inscription-3.jpg",
+        "https://www.dw.com/image/49539105_303.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "model": "2030 Jeep Grand Heroku",
+      "price": "$20,000",
+      "pass": "1,000км",
+      "year": 2012,
+      "kpp": "Механическая",
+      "engine": "1.7",
+      "fuel": "Бензин",
+      "color": "Серый",
+      "state": "Новое",
+      "status": "Готов",
+      "location": "Германия",
+      "desc": "Много текста",
+      "images": [
+        " https://kor.ill.in.ua/m/610x385/2081558.jpg",
+        "https://cdn.motor1.com/images/mgl/GMn1b/s4/yerli-otomobil-tanitildi.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "model": "2030 Авто",
+      "price": "$5,000",
+      "pass": "1,120км",
+      "year": 2076,
+      "kpp": "Механическая",
+      "engine": "1.7",
+      "fuel": "Бензин",
+      "color": "Серый",
+      "state": "Новое",
+      "status": "Готов",
+      "location": "Германия",
+      "desc": "Много текста",
+      "images": [
+        "https://1gai.ru/uploads/posts/2015-06/1433446501_bestcars2015lead.jpg",
+        "https://most-beauty.ru/wp-content/uploads/2016/12/Tachka.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "model": "2030 Авто",
+      "price": "$5,000",
+      "pass": "1,120км",
+      "year": 2076,
+      "kpp": "Механическая",
+      "engine": "1.7",
+      "fuel": "Бензин",
+      "color": "Серый",
+      "state": "Новое",
+      "status": "Готов",
+      "location": "Германия",
+      "desc": "Много текста",
+      "images": [
+        "https://1gai.ru/uploads/posts/2015-06/1433446501_bestcars2015lead.jpg",
+        "https://most-beauty.ru/wp-content/uploads/2016/12/Tachka.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "model": "2030 Авто",
+      "price": "$5,000",
+      "pass": "1,120км",
+      "year": 2076,
+      "kpp": "Механическая",
+      "engine": "1.7",
+      "fuel": "Бензин",
+      "color": "Серый",
+      "state": "Новое",
+      "status": "Готов",
+      "location": "Германия",
+      "desc": "Много текста",
+      "images": [
+        "https://1gai.ru/uploads/posts/2015-06/1433446501_bestcars2015lead.jpg",
+        "https://most-beauty.ru/wp-content/uploads/2016/12/Tachka.jpg"
+      ]
+    }
+  ]
+}
