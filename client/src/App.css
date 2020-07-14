@@ -791,7 +791,10 @@ aside ul li i {
     width: 90%;
   }
   .card {
+<<<<<<< HEAD
     width: calc(90% / 4);
+=======
+>>>>>>> cadf543ce898a5674386be51b1462b776bc3dc8f
     height: 310px;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
