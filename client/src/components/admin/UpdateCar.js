@@ -2,6 +2,7 @@ import React, { useState, Component } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 class UpdateCar extends Component {
   constructor(props) {
@@ -20,6 +21,8 @@ class UpdateCar extends Component {
       color: '',
       location: '',
       desc: '',
+      images: [],
+      redirect: false,
     };
     this.onTextChange = this.onTextChange.bind(this);
     this.onImageChange = this.onImageChange.bind(this);
@@ -42,6 +45,7 @@ class UpdateCar extends Component {
         color: car.color,
         location: car.location,
         desc: car.desc,
+        images: car.images,
       });
       console.log(this.state);
     });
@@ -61,6 +65,15 @@ class UpdateCar extends Component {
   onQuillChange(e) {
     this.setState({ desc: e });
   }
+  onImageDelete(e, image) {
+    e.preventDefault();
+    let newImages = this.state.images.slice();
+    const index = newImages.indexOf(image);
+    newImages.splice(index, 1);
+    this.setState({ images: newImages });
+    Axios.delete(`/api/car/image/${image}`);
+    console.log(image);
+  }
   onSubmit(e) {
     e.preventDefault();
 
@@ -76,13 +89,20 @@ class UpdateCar extends Component {
     info.append('state', this.state.state);
     info.append('status', this.state.status);
     info.append('location', this.state.location);
+    for (let index = 0; index < this.state.images.length; index++) {
+      info.append('images[]', this.state.images[index]);
+    }
+
     for (const key of Object.keys(this.state.imgCollection)) {
-      info.append('images', this.state.imgCollection[key]);
+      info.append('imagesFiles', this.state.imgCollection[key]);
     }
 
     info.append('desc', this.state.desc);
     // console.log(info);
-    Axios.put(`/api/car/${this.props.match.params.id}`, info);
+    Axios.patch(`/api/car/${this.props.match.params.id}`, info).then((res) => {
+      console.log(info);
+      this.setState({ redirect: true });
+    });
   }
   render() {
     const {
@@ -102,6 +122,7 @@ class UpdateCar extends Component {
     } = this.state;
     return (
       <div className="admin-panel">
+        {this.state.redirect ? <Redirect to="/admin" /> : ''}
         <h1>Добавить автомобиль</h1>
         <form className="add-car" onSubmit={(e) => this.onSubmit(e)}>
           <div className="form-group">
@@ -230,7 +251,18 @@ class UpdateCar extends Component {
               multiple
             />
             <br />
-            <div></div>
+            <div className="photo-flex">
+              {this.state.images.map((image) => {
+                return (
+                  <div className="photoPreview">
+                    <img src={`/api/car/image/${image}`} />
+                    <button className="btnDelete" onClick={(e) => this.onImageDelete(e, image)}>
+                      <i className="fa fa-times"></i>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
             <br />
             <label>Описание:</label> <br />
             <ReactQuill
@@ -244,7 +276,7 @@ class UpdateCar extends Component {
               formats={UpdateCar.formats}
               placeholder="Здесь указать описание"
             />
-            <button>Добавить авто</button>
+            <button className="add-car-btn">Редактировать</button>
           </div>
         </form>
       </div>

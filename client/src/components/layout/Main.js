@@ -34,7 +34,8 @@ class Main extends Component {
                     <div key={car._id} className="card">
                       <Link to={`/car-details/${car._id}`}>
                         <div className="image-container">
-                          <img src={car.images[0]} />
+                          <img src={`/api/car/image/${car.images[0]}`} />
+                          {console.log(car.images[0])}
                         </div>
                         <div className="card-details">
                           <p className="vehicle-name">{car.model}</p>

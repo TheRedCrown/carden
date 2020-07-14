@@ -228,7 +228,7 @@ aside ul li i {
   text-decoration: underline;
 }
 
-.add-car button {
+.add-car .add-car-btn {
   padding: 10px 15px;
   width: 150px;
   margin: 20px 0;
@@ -791,11 +791,35 @@ aside ul li i {
     width: 90%;
   }
   .card {
-    width: 100%;
+    width: calc(90% / 4);
     height: 310px;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
     transition: all 0.3s;
     margin-bottom: 20px;
+  }
+  .photo-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .photoPreview {
+    position: relative;
+    width: auto;
+  }
+
+  .btnDelete {
+    top: 10%;
+    right: 10%;
+    position: absolute;
+    background-color: #e90000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btnDelete:hover {
+    background-color: #c80000;
+    box-shadow: 0 0px 5px #000;
   }
 }

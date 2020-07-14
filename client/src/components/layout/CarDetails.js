@@ -58,7 +58,7 @@ class CarDetails extends Component {
                   <div className="img-slider">
                     <div className="images">
                       {console.log(car.images[this.state.i])}
-                      <img src={car.images[this.state.i]} alt="" />
+                      <img src={`/api/car/image/${car.images[this.state.i]}`} alt="" />
                     </div>
                     <button className="prevBtn" onClick={(e) => this.prevImage(e)}>
                       <i className="fas fa-chevron-left"></i>

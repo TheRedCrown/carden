@@ -38,6 +38,16 @@ class AddCar extends Component {
       console.log(this.state.imgCollection[key]);
     }
     console.log(this.state.imgCollection);
+
+    const reader = new FileReader();
+
+    for (const key of Object.keys(this.state.imgCollection)) {
+      reader.onload = () => {
+        console.log(reader.result);
+      };
+
+      reader.readAsDataURL(this.state.imgCollection[key]);
+    }
   }
   onQuillChange(e) {
     this.setState({ desc: e });
@@ -58,7 +68,7 @@ class AddCar extends Component {
     info.append('status', this.state.status);
     info.append('location', this.state.location);
     for (const key of Object.keys(this.state.imgCollection)) {
-      info.append('images', this.state.imgCollection[key]);
+      info.append('imagesFiles', this.state.imgCollection[key]);
     }
 
     console.log(this.state);
@@ -69,6 +79,7 @@ class AddCar extends Component {
       this.setState({ redirect: true });
     });
   }
+  componentDidUpdate() {}
   render() {
     const {
       model,
@@ -85,6 +96,7 @@ class AddCar extends Component {
       imgCollection,
       desc,
     } = this.state;
+
     return (
       <div className="admin-panel">
         {this.state.redirect ? <Redirect to="/admin" /> : ''}
