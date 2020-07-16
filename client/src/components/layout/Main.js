@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import Spinner from './Spinner';
 import Navbar from './Navbar';
+import { CSSTransition } from 'react-transition-group';
 
 class Main extends Component {
   constructor(props) {
@@ -31,20 +32,22 @@ class Main extends Component {
               ) : (
                 cars.map((car) => {
                   return (
-                    <div key={car._id} className="card">
-                      <Link to={`/car-details/${car._id}`}>
-                        <div className="image-container">
-                          <img src={`/api/car/image/${car.images[0]}`} />
-                          {console.log(car.images[0])}
-                        </div>
-                        <div className="card-details">
-                          <p className="vehicle-name">{car.model}</p>
-                          <div className="price-style">{car.price}</div>
-                          <div className="meta-style">{car.pass}</div>
-                          <button className="more-details">узнать больше</button>
-                        </div>
-                      </Link>
-                    </div>
+                    <CSSTransition in={cars} appear={true} timeout={300} classNames="fade">
+                      <div key={car._id} className="card">
+                        <Link to={`/car-details/${car._id}`}>
+                          <div className="image-container">
+                            <img src={`/api/car/image/${car.images[0]}`} />
+                            {console.log(car.images[0])}
+                          </div>
+                          <div className="card-details">
+                            <p className="vehicle-name">{car.model}</p>
+                            <div className="price-style">{car.price}</div>
+                            <div className="meta-style">{car.pass}</div>
+                            <button className="more-details">узнать больше</button>
+                          </div>
+                        </Link>
+                      </div>
+                    </CSSTransition>
                   );
                 })
               )}

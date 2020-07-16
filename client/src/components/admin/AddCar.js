@@ -240,7 +240,7 @@ class AddCar extends Component {
               formats={AddCar.formats}
               placeholder="Здесь указать описание"
             />
-            <button>Добавить авто</button>
+            <button className="add-car-btn">Добавить авто</button>
           </div>
         </form>
       </div>
