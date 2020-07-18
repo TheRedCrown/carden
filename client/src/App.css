@@ -732,6 +732,7 @@ aside ul li i {
   }
   .img-slider {
     width: 75%;
+    margin-right: 20px;
   }
   .vehicle-wrapper {
     justify-content: space-between;
