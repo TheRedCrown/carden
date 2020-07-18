@@ -69,38 +69,42 @@ class CarDetails extends Component {
                   </div>
                   <div className="vehicle-details">
                     <h2>Информация</h2>
-                    <ul>
-                      <li>
-                        <span>Цена:</span> {car.price}
-                      </li>
-                      <li>
-                        <span>Пробег:</span> {car.pass}
-                      </li>
-                      <li>
-                        <span>Год:</span> {car.year}
-                      </li>
-                      <li>
-                        <span>КПП:</span> {car.kpp}
-                      </li>
-                      <li>
-                        <span>Двигатель:</span> {car.engine}
-                      </li>
-                      <li>
-                        <span>Топливо:</span> {car.fuel}
-                      </li>
-                      <li>
-                        <span>Цвет:</span> {car.color}
-                      </li>
-                      <li>
-                        <span>Состояние:</span> {car.state}
-                      </li>
-                      <li>
-                        <span>Статус:</span> {car.status}
-                      </li>
-                      <li>
-                        <span>Местоположение:</span> {car.location}
-                      </li>
-                    </ul>
+                    <div>
+                      <ul>
+                        <li>
+                          <span>Цена:</span> {car.price}
+                        </li>
+                        <li>
+                          <span>Пробег:</span> {car.pass}
+                        </li>
+                        <li>
+                          <span>Год:</span> {car.year}
+                        </li>
+                        <li>
+                          <span>КПП:</span> {car.kpp}
+                        </li>
+                        <li>
+                          <span>Двигатель:</span> {car.engine}
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <span>Топливо:</span> {car.fuel}
+                        </li>
+                        <li>
+                          <span>Цвет:</span> {car.color}
+                        </li>
+                        <li>
+                          <span>Состояние:</span> {car.state}
+                        </li>
+                        <li>
+                          <span>Статус:</span> {car.status}
+                        </li>
+                        <li>
+                          <span>Местоположение:</span> {car.location}
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div className="description">
